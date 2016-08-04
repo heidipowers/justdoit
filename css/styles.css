@@ -1,0 +1,114 @@
+body {
+  font-family: Helvetica, sans-serif; }
+  body p {
+    color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #555; }
+
+.row {
+  padding: 2em 0;
+  margin-top: 3em;
+  margin-bottom: 2em; }
+
+.row .last {
+  margin-bottom: 0; }
+
+section {
+  padding: 2em; }
+
+.column, .columns {
+  float: left; }
+
+.contain {
+  max-width: 80em;
+  margin: 0 auto; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+header {
+  background-color: #000; }
+
+nav li {
+  display: inline-block;
+  padding: 2em; }
+nav a {
+  color: #999;
+  text-transform: uppercase;
+  font-weight: bold; }
+nav :hover {
+  color: #fff; }
+
+h2 {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  text-transform: uppercase; }
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold; }
+
+.development {
+  background-color: #F8F8F8; }
+
+.illustration {
+  background-color: #E0E0E0; }
+
+.contact {
+  background-color: #D0D0D0;
+  position: relative; }
+  .contact .inner {
+    padding: 3em; }
+  .contact p {
+    color: #000;
+    font-size: 1em; }
+  .contact span {
+    font-weight: bold; }
+
+.portrait {
+  border-radius: 50%;
+  max-height: 100%;
+  max-width: 100%; }
+
+.portfolio {
+  border: 1px solid #efefef; }
+
+.development {
+  margin: 1em 0; }
+
+footer {
+  background-color: #000;
+  min-height: 3em; }
+
+footer section {
+  padding: 0; }
+
+p {
+  margin-top: 1em;
+  font-size: 1em;
+  color: #E0E0E0; }
+
+.heidi-img {
+  height: 500px;
+  min-width: auto;
+  position: absolute;
+  top: 0; }
+
+.intro {
+  position: relative; }
+
+.intro1 {
+  position: absolute;
+  width: 100%;
+  font-size: 3em;
+  top: 0; }
+
+/*# sourceMappingURL=styles.css.map */

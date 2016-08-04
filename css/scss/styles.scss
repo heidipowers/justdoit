@@ -1,0 +1,179 @@
+//VARIABLES
+$black: #000;
+$white: #fff;
+$bold: bold;
+$max-width: 80em;
+$left: left;
+$right: right;
+$center: center;
+$centered: 0 auto;
+$fullwidth: 100%;
+$grey1: #F8F8F8;
+$grey2: #E0E0E0;
+$grey3: #D0D0D0;
+$fontColor: #333;
+$headlineColor: #555;
+
+//GLOBAL
+
+body {
+font-family: Helvetica, sans-serif;
+
+
+  p {
+    color: #333;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $headlineColor;
+}
+
+.row {
+  padding: 2em 0;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.row .last {
+  margin-bottom: 0;
+}
+
+section {
+  padding: 2em;
+}
+
+
+.column, .columns {
+  float: left;
+}
+
+.contain {
+  max-width: $max-width;
+  margin: $centered;
+}
+
+.left {
+  text-align: $left;
+}
+
+.right {
+  text-align: $right;
+}
+
+.center {
+  text-align: $center;
+}
+
+//HEADER NAV
+
+header {
+  background-color: $black;
+}
+
+nav {
+
+  li {
+    display: inline-block;
+    padding: 2em;
+  }
+
+  a {
+    color: #999;
+    text-transform: uppercase;
+    font-weight: $bold;
+  }
+
+  :hover {
+    color: $white;
+  }
+
+}
+
+h2 {
+  border-bottom: 1px solid $black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: $bold;
+}
+
+.development {
+  background-color: $grey1;
+}
+
+.illustration {
+  background-color: $grey2;
+}
+
+.contact {
+  background-color: $grey3;
+  position: relative;
+
+  .inner {
+    padding: 3em;
+  }
+
+  p {
+    color: $black;
+    font-size: 1em;
+  }
+
+  span {
+    font-weight: $bold;
+  }
+}
+
+.portrait {
+  border-radius: 50%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.portfolio {
+  border: 1px solid #efefef;
+}
+
+.development {
+  margin: 1em 0;
+}
+//FOOTER
+
+footer {
+  background-color: $black;
+  min-height: 3em;
+}
+
+footer section {
+  padding: 0;
+}
+
+p {
+  margin-top: 1em;
+  font-size: 1em;
+  color: $grey2;
+}
+
+.heidi-img {
+  height: 500px;
+  min-width: auto;
+  position: absolute;
+  top: 0;
+}
+
+//Animation
+.intro {
+ position:relative;
+}
+
+.intro1 {
+  position: absolute;
+  width: 100%;
+  font-size: 3em;
+  top: 0;
+}
+
