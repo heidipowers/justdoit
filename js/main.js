@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-let intro1 = $('.intro1');
-let unicrons = $('.unicrons');
-let $intro = $('.intro');
-let $development = $('.development');
+var intro1 = $('.intro1');
+var unicrons = $('.unicrons');
+var $intro = $('.intro');
+var $development = $('.development');
 
  //TweenLite.fromTo(intro1, 3, {y:-100, opacity: 0}, {y:200, opacity: 1, ease:Elastic.easeOut})
  //TweenLite.fromTo(unicrons, 3, {x: 500, opacity: 1},{x:-2000, ease:Power1.easeIn, opacity: 0, onComplete:changeHeadline})
