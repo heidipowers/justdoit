@@ -47,9 +47,9 @@ nav :hover {
   color: #fff; }
 
 h2 {
-  border-bottom: 1px solid #000;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 1.5em; }
 
 h4 {
   text-transform: uppercase;
@@ -111,4 +111,49 @@ p {
   font-size: 3em;
   top: 0; }
 
+  /*PAGES*/
+
+  .project-header {
+    font-size: 3em;
+  }
+
+  .description {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+
+  .technologies {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    text-align: center;
+  }
+
+  .grouper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .full-bg {
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+  #unhitched {
+    background-image: url("../images/unhitched-app.svg");
+    background-position: left bottom;
+    background-color: #efefef;
+  }
+
+  #community-cats {
+    background-image: url("../images/comCats.png");
+  }
+
+  #deep-dig {}
 /*# sourceMappingURL=styles.css.map */
