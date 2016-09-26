@@ -13,6 +13,7 @@ $grey2: #E0E0E0;
 $grey3: #D0D0D0;
 $fontColor: #333;
 $headlineColor: #555;
+$third: 100/3 * 1%;
 
 //GLOBAL
 
@@ -175,5 +176,82 @@ p {
   width: 100%;
   font-size: 3em;
   top: 0;
+}
+
+.heidi-block {
+  height: 100vh;
+}
+
+.portrait1 {
+  background-image: url('../images/hair.jpg');
+  height: 100vh;
+
+}
+
+
+//animate
+
+.word, .firstdot, .seconddot {
+  fill: none;
+}
+
+#photo-trio {
+  width: 100%;
+  text-align: center;
+  position:relative;
+}
+
+#photo-trio img {
+  height: auto;
+  width: $third;
+  position: absolute;
+}
+
+#trapezoid-left {
+ -webkit-clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+  height: auto;
+  left: 0;
+}
+
+#center {
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+clip-path: polygon(50% 100%, 0 0, 100% 0);
+left: $third;
+}
+
+#trapezoid-right {
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+right: 0;
+}
+
+//Typed.js www.mattboldt.com
+
+@keyframes arrowTurn {
+  from {transform: rotate(0deg);}
+    to {transform: rotate(90deg);}
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
