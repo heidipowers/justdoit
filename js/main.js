@@ -1,6 +1,25 @@
 
 $(document).ready(function() {
 
+let unicorns = $('.unicorns path');
+console.log(unicorns)
+
+function changeColor(){
+  console.log('clicked');
+  let $this = $(this);
+  $this.css("fill", "red");
+}
+
+
+
+
+unicorns.on('click', function(){
+  let randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+console.log(randomColor)
+    $(this).css("fill", randomColor)
+});
+
+
     let intro1 = $('.intro1');
     let unicrons = $('.unicrons');
     let $intro = $('.intro');
@@ -40,7 +59,7 @@ $(document).ready(function() {
     secondScene
        .to("h3", 1, {autoAlpha:0})
        .fromTo(".fadein", 1, {opacity: 0}, {opacity: 1})
-
+console.log(secondScene)
 
     var scene2 = new ScrollMagic.Scene({
       triggerElement: ".scene2",
