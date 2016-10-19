@@ -2,21 +2,33 @@
 $(document).ready(function() {
 
 let unicorns = $('.unicorns path');
-console.log(unicorns)
 
-function changeColor(){
-  console.log('clicked');
-  let $this = $(this);
-  $this.css("fill", "red");
+
+function changeUnicorns(unicorn,newColor){
+     TweenMax.to(unicorn, 2,{fill: newColor, opacity: Math.random()});
 }
 
+function changeColor(newColor, $this) {
+  for(let i = 0; i < unicorns.length; i++){
+     setTimeout(function(x) { return function() {
+     changeUnicorns(unicorns[x], newColor)}; }(i), 100*i)
 
+  }
+}
 
+//https://github.com/davidmerfield/randomColor
 
 unicorns.on('click', function(){
-  let randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-console.log(randomColor)
-    $(this).css("fill", randomColor)
+//let newColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+let newColor =
+randomColor({
+   luminosity: 'random',
+   hue: 'random'
+});
+console.log(newColor)
+let $this = $(this);
+$this.css("fill", newColor);
+changeColor(newColor, $this);
 });
 
 
