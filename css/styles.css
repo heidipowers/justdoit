@@ -103,7 +103,9 @@ p {
   top: 0; }
 
 .intro {
-  position: relative; }
+  position: relative;
+  font-family: 'Satisfy', cursive;;
+}
 
 .intro1 {
   position: absolute;
