@@ -19,13 +19,18 @@ $(document).ready(function() {
         }
     }
 
+
+    function opacity(el, time) {
+      TweenLite.fromTo(el, time,{ opacity: 0 }, { opacity: 1 })
+    }
+
     //https://github.com/davidmerfield/randomColor
 
     unicorns.on('click', function() {
 
       if (intro1.hasClass("finished")) {
         console.log("inside CSS")
-        intro1.fadeOut(1000);
+        intro1.fadeOut(1200);
       }
         let newColor =
             randomColor({
@@ -54,8 +59,8 @@ $(document).ready(function() {
     var firstScene = new TimelineLite();
     firstScene
         .fromTo(intro1, 2, { y: -100, opacity: 0 }, { y: 200, opacity: 1, ease: Power1.easeOut, onComplete: changeHeadline, delay: .5 })
-        .fromTo(unicrons, 2, { opacity: 1 }, { opacity: 0, onComplete: changeAgain})
-        .to(unicrons, 3, { width: 0, onUpdate: moveOnUp, ease: Power1.easeOut, onComplete: changeLast})
+        .fromTo(unicrons, 2, { opacity: 1 }, { opacity: 0, onComplete: changeAgain, delay: 1}, '-=1')
+        .to(unicrons, 3, { width: 0, onUpdate: moveOnUp, ease: Power1.easeOut, onComplete: changeLast}, '-=1')
 
 
 
@@ -97,16 +102,18 @@ $(document).ready(function() {
 
     //Scene 1
     function changeHeadline() {
-        intro1.text("I create things in many mediums...");
+        intro1.text(" I create in many mediums...");
     }
 
     function changeAgain() {
         intro1.text("..to tell stories...")
+        opacity(intro1, 4);
     }
 
     function changeLast() {
         intro1.text("(go ahead...click one)")
         intro1.addClass("finished")
+        opacity(intro1, 2);
     }
 
     function moveOnUp() {
@@ -129,7 +136,7 @@ $(document).ready(function() {
     pathPrepare($second);
 
     var drawSVG = new TimelineMax()
-        .add(TweenMax.to($word, 0.9, { strokeDashoffset: 0, ease: Linear.easeNone })) // draw word for 0.9
+        .add(TweenMax.fromTo($word, 0.5, {opacity: 0}, { opacity: 1, strokeDashoffset: 0, ease: Linear.easeNone })) // draw word for 0.9
         .add(TweenMax.to($first, 0.1, { strokeDashoffset: 0, ease: Linear.easeNone }))
         .add(TweenMax.to($second, 0.1, { strokeDashoffset: 0, ease: Linear.easeNone })) // draw dot for 0.1
         .add(TweenMax.to("path", 1, { stroke: "#33629c", fill: "#efefef", ease: Linear.easeNone }), 0); // change color during the whole thing
