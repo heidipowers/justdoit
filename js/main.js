@@ -19,25 +19,19 @@ $(document).ready(function() {
         }
     }
 
-
-    function opacity(el, time) {
-      TweenLite.fromTo(el, time,{ opacity: 0 }, { opacity: 1 })
-    }
-
     //https://github.com/davidmerfield/randomColor
 
     unicorns.on('click', function() {
 
       if (intro1.hasClass("finished")) {
-        console.log("inside CSS")
-        intro1.fadeOut(1200);
+        intro1.text("So Good! Click or Scroll");
+        TweenLite.fromTo(intro1, 4,{ opacity: .7}, { opacity: .1 });
       }
         let newColor =
             randomColor({
                 luminosity: 'random',
                 hue: 'random'
             });
-        console.log(newColor)
         let $this = $(this);
         $this.css("fill", newColor);
         changeColor(newColor, $this);
@@ -59,8 +53,8 @@ $(document).ready(function() {
     var firstScene = new TimelineLite();
     firstScene
         .fromTo(intro1, 2, { y: -100, opacity: 0 }, { y: 200, opacity: 1, ease: Power1.easeOut, onComplete: changeHeadline, delay: .5 })
-        .fromTo(unicrons, 2, { opacity: 1 }, { opacity: 0, onComplete: changeAgain, delay: 1}, '-=1')
-        .to(unicrons, 3, { width: 0, onUpdate: moveOnUp, ease: Power1.easeOut, onComplete: changeLast}, '-=1')
+        .fromTo(unicrons, 3, { opacity: 1 }, { opacity: 0, onComplete: changeAgain})
+        .to(unicrons, 3.5, { width: 0, onUpdate: moveOnUp, ease: Power1.easeOut, delay: 2, onComplete: changeLast},'-=4')
 
 
 
@@ -102,18 +96,18 @@ $(document).ready(function() {
 
     //Scene 1
     function changeHeadline() {
-        intro1.text(" I create in many mediums...");
+        intro1.text(" I create things in many mediums...");
     }
 
     function changeAgain() {
-        intro1.text("..to tell stories...")
-        opacity(intro1, 4);
+        intro1.text("( good things )")
+                intro1.addClass("finished")
     }
 
     function changeLast() {
-        intro1.text("(go ahead...click one)")
-        intro1.addClass("finished")
-        opacity(intro1, 2);
+      intro1.text(" Go ahead...click a Unicorn")
+              intro1.addClass("finished")
+        TweenLite.fromTo(intro1, 5, { opacity: 0 }, { opacity: 1, delay: .5 })
     }
 
     function moveOnUp() {
