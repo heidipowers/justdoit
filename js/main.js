@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     let unicorns = $('.unicorns path');
+    let intro1 = $('.intro1');
 
 
     function changeUnicorns(unicorn, newColor) {
@@ -21,6 +22,11 @@ $(document).ready(function() {
     //https://github.com/davidmerfield/randomColor
 
     unicorns.on('click', function() {
+
+      if (intro1.hasClass("finished")) {
+        console.log("inside CSS")
+        intro1.fadeOut(1000);
+      }
         let newColor =
             randomColor({
                 luminosity: 'random',
@@ -33,7 +39,7 @@ $(document).ready(function() {
     });
 
 
-    let intro1 = $('.intro1');
+
     let unicrons = $('.unicrons');
     console.log(unicrons + " unicrons")
     let $intro = $('.intro');
@@ -100,6 +106,7 @@ $(document).ready(function() {
 
     function changeLast() {
         intro1.text("(go ahead...click one)")
+        intro1.addClass("finished")
     }
 
     function moveOnUp() {

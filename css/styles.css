@@ -104,14 +104,15 @@ p {
 
 .intro {
   position: relative;
-  font-family: 'Satisfy', cursive;;
-}
+  font-family: 'Satisfy', cursive; }
 
 .intro1 {
   position: absolute;
   width: 100%;
   font-size: 3em;
-  top: 0; }
+  top: 0;
+  opacity: 0;
+  font-family: 'Satisfy', cursive; }
 
 .text {
   position: absolute;

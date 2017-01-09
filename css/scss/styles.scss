@@ -169,6 +169,7 @@ p {
 //Animation
 .intro {
  position:relative;
+ font-family: 'Satisfy', cursive;
 }
 
 .intro1 {
@@ -176,6 +177,8 @@ p {
   width: 100%;
   font-size: 3em;
   top: 0;
+  opacity: 0;
+  font-family: 'Satisfy', cursive;
 }
 
 .text {
